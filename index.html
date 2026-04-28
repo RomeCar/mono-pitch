@@ -1,10 +1,13 @@
 <!--
-  mono-pitch — single-page application site template
+  mono-pitch — demo
   https://github.com/RomeCar/mono-pitch
 
-  Replace everything in [BRACKETS] with your own content.
-  Section structure can be re-ordered or trimmed; each <section> is independent.
-  No build step required: drop on any static host (Netlify, Vercel, Caddy, nginx, S3+CF).
+  This is the rendered example. To use the template for your own site,
+  start from `template.html` (everything in [BRACKETS] is yours to fill).
+
+  All names, companies, numbers and quotes below are fictional. Avery
+  Chen does not exist; Northwind Labs does not exist. The page is here
+  to show you what each section looks like rendered.
 -->
 <!doctype html>
 <html lang="en">
@@ -12,7 +15,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>[YOUR NAME] — for [COMPANY]</title>
+  <title>mono-pitch — demo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -48,16 +51,27 @@
     a.link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
     a.link:hover { text-decoration-thickness: 2px; }
     ::selection { background: #0a0a0a; color: #fafafa; }
+    .demo-banner { background: #fafafa; border-bottom: 1px solid #e5e5e5; }
   </style>
 </head>
 <body class="bg-paper text-ink font-mono antialiased text-[15px] leading-[1.7]">
 
   <!-- ============================================================ -->
-  <!-- TOP NAV — anchor jumps to sections                            -->
+  <!-- DEMO BANNER (delete this in your own copy)                    -->
+  <!-- ============================================================ -->
+  <div class="demo-banner">
+    <div class="mx-auto max-w-3xl px-6 sm:px-8 py-3 text-xs text-muted flex justify-between items-center gap-4">
+      <span class="label">// demo · all content fictional</span>
+      <a href="https://github.com/RomeCar/mono-pitch" class="hover:text-ink whitespace-nowrap">github.com/RomeCar/mono-pitch ↗</a>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- TOP NAV                                                       -->
   <!-- ============================================================ -->
   <nav class="border-b hairline">
     <div class="mx-auto max-w-3xl px-6 sm:px-8 py-4 flex justify-between items-center text-xs">
-      <span class="label">[INITIALS] ▮ [COMPANY] application</span>
+      <span class="label">AC ▮ Northwind application</span>
       <div class="flex gap-6 text-muted">
         <a href="#pov" class="hover:text-ink">pov</a>
         <a href="#track-record" class="hover:text-ink">track-record</a>
@@ -70,36 +84,36 @@
   <main class="mx-auto max-w-3xl px-6 sm:px-8 py-20 sm:py-28">
 
     <!-- ============================================================ -->
-    <!-- HERO — name, tagline, role link, contact card                 -->
+    <!-- HERO                                                          -->
     <!-- ============================================================ -->
     <header class="mb-28">
-      <div class="label text-muted mb-10">// a note to [company], [month year]</div>
+      <div class="label text-muted mb-10">// a note to northwind, march 2026</div>
       <h1 class="display text-4xl sm:text-6xl mb-10">
-        [ONE-LINE TAGLINE.]<br/>
-        [SECOND LINE OPTIONAL.]
+        For European partnerships,<br/>
+        the leverage is the network.
       </h1>
       <p class="text-base text-ink/85 max-w-prose mb-10">
         Written in support of my application for the
-        <a class="link" href="#">[ROLE TITLE]</a>
-        role at [COMPANY].
+        <a class="link" href="#">Head of European Partnerships</a>
+        role at Northwind Labs.
       </p>
       <div class="flex flex-wrap gap-y-3 gap-x-10 text-xs text-muted">
         <div>
           <div class="label text-faint mb-1">name</div>
-          <div class="text-ink whitespace-nowrap">[Your Name]</div>
+          <div class="text-ink whitespace-nowrap">Avery Chen</div>
         </div>
         <div>
           <div class="label text-faint mb-1">based</div>
-          <div class="text-ink whitespace-nowrap">[City → City]</div>
+          <div class="text-ink whitespace-nowrap">Berlin → Amsterdam</div>
         </div>
         <div>
           <div class="label text-faint mb-1">email</div>
-          <a href="mailto:you@example.com" class="text-ink hover:underline whitespace-nowrap">you@example.com</a>
+          <a href="mailto:avery@example.com" class="text-ink hover:underline whitespace-nowrap">avery@example.com</a>
         </div>
         <div>
           <div class="label text-faint mb-1">downloads</div>
           <div class="text-ink whitespace-nowrap">
-            <a href="cv.pdf" class="hover:underline">↓ cv</a>
+            <a href="#" class="hover:underline">↓ cv</a>
           </div>
         </div>
       </div>
@@ -108,44 +122,44 @@
     <hr class="hairline my-20" />
 
     <!-- ============================================================ -->
-    <!-- §01 POV — your opinion on the problem the role exists to solve -->
+    <!-- §01 POV                                                       -->
     <!-- ============================================================ -->
     <section id="pov" class="mb-28">
-      <div class="label text-muted mb-6">§ 01 — [the problem this role exists to solve]</div>
+      <div class="label text-muted mb-6">§ 01 — the european partnerships problem</div>
       <h2 class="display text-2xl sm:text-4xl mb-12">
-        [Sharp, contrarian-but-defensible thesis statement in one sentence.]
+        Pipeline doesn't compound. Trust does.
       </h2>
 
       <div class="space-y-6 text-[15px] text-ink/90 max-w-prose">
         <p>
-          [Open with the framing — what most people think the job is, and why that framing is wrong or incomplete. This is your chance to demonstrate you understand the real problem.]
+          Most partnerships orgs in Europe measure themselves on outbound volume — meetings booked, decks sent, MQLs surfaced. The numbers move; the deals don't. The reason is structural: Europe is twenty-seven jurisdictions, four big buyer cultures, and a procurement process that rewards relationships built over years rather than quarters.
         </p>
         <p>
-          [Develop the argument with specifics. Names of places, regulations, technical constraints, market dynamics. The reader should finish this paragraph thinking "this person actually knows the territory."]
+          The teams that close at scale here look different. They have a small senior bench with deep operator credibility in two or three target verticals, they reinvest in those verticals rather than chase pipeline breadth, and they treat reference accounts as a renewable resource — every closed customer becomes the introduction path for the next three. The compounding is in the network, not the funnel.
         </p>
         <p>
-          [Final paragraph re-frames the question the team should be asking. End with a bridge into your concrete recommendations or evidence below.]
+          The interesting question for Northwind in the next eighteen months isn't "how do we generate more pipeline" — it's "which two verticals do we go deep on, and which buyers do we earn the right to be the default partner for." That's a different operating model and a different hire.
         </p>
       </div>
 
       <div class="mt-14 border hairline p-6 sm:p-8 bg-white">
-        <div class="label text-muted mb-4">[three concrete moves the company should make]</div>
+        <div class="label text-muted mb-4">three concrete moves for the first six months</div>
         <ol class="space-y-5 text-[15px] text-ink/90">
           <li>
-            <span class="font-semibold">01 ▸ [First concrete move.]</span>
-            [One- to two-sentence explanation. Specific enough to be defensible, generic enough to not give away too much for free.]
+            <span class="font-semibold">01 ▸ Pick two verticals, exit the rest.</span>
+            Most European partnerships orgs run nine and close one. Northwind's product is sharpest in regulated industries with long procurement cycles — start with financial services and energy, defer the others.
           </li>
           <li>
-            <span class="font-semibold">02 ▸ [Second concrete move.]</span>
-            [Same.]
+            <span class="font-semibold">02 ▸ Build a senior reference bench.</span>
+            Five named buyers per vertical, willing to take a 30-minute reference call. Make this a measured KPI, not a lagging metric — it predicts close rate twelve months out.
           </li>
           <li>
-            <span class="font-semibold">03 ▸ [Third concrete move.]</span>
-            [Same.]
+            <span class="font-semibold">03 ▸ Co-develop with two systems integrators.</span>
+            European mid-market doesn't buy direct from American tech. Pick two regional SIs (one Nordic, one DACH), build a real co-sell motion, treat them as channel rather than as resellers.
           </li>
         </ol>
         <p class="mt-6 text-xs text-muted">
-          [Optional one-line caveat that grounds the recommendations: who already does this, why it isn't yet standard, etc.]
+          None of this is novel. Stripe, Snowflake and Databricks all ran a version of it in their European push. The differentiator is execution speed.
         </p>
       </div>
     </section>
@@ -153,7 +167,7 @@
     <hr class="hairline my-20" />
 
     <!-- ============================================================ -->
-    <!-- §02 TRACK RECORD — JD requirements mapped to specific evidence -->
+    <!-- §02 TRACK RECORD                                              -->
     <!-- ============================================================ -->
     <section id="track-record" class="mb-28">
       <div class="label text-muted mb-6">§ 02 — what you asked for, what i have done</div>
@@ -163,33 +177,33 @@
 
       <div class="border-t hairline">
         <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
-          <div class="sm:col-span-4 label text-muted">[JD requirement #1]</div>
+          <div class="sm:col-span-4 label text-muted">Multi-stakeholder closes, 7-figure ARR</div>
           <div class="sm:col-span-8 text-[14.5px] text-ink/90">
-            [Specific evidence: company, scale, outcome. Numbers help.]
+            12 closed deals above €1M ARR at previous role; largest €4.7M, 14-month cycle, 9 stakeholders across legal, security, procurement and three business units.
           </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
-          <div class="sm:col-span-4 label text-muted">[JD requirement #2]</div>
+          <div class="sm:col-span-4 label text-muted">Building partnerships from zero</div>
           <div class="sm:col-span-8 text-[14.5px] text-ink/90">
-            [Evidence.]
+            Stood up the EMEA partner programme at two prior companies (one Series B, one public). 0 → €18M influenced ARR in 14 months at the most recent.
           </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
-          <div class="sm:col-span-4 label text-muted">[JD requirement #3]</div>
+          <div class="sm:col-span-4 label text-muted">Multi-country execution</div>
           <div class="sm:col-span-8 text-[14.5px] text-ink/90">
-            [Evidence.]
+            Active commercial work across DE, FR, NL, SE, ES, IT and the UK. Native German and English; conversational French and Dutch. Based in Berlin; willing to base in Amsterdam.
           </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
-          <div class="sm:col-span-4 label text-muted">[JD requirement #4]</div>
+          <div class="sm:col-span-4 label text-muted">Cross-functional coordination</div>
           <div class="sm:col-span-8 text-[14.5px] text-ink/90">
-            [Evidence.]
+            Worked closely with legal on master agreements across 6 jurisdictions; built the deal-desk function at last role; ran weekly syncs with product on partner-driven feature requests.
           </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
-          <div class="sm:col-span-4 label text-muted">[JD requirement #5]</div>
+          <div class="sm:col-span-4 label text-muted">Industry presence</div>
           <div class="sm:col-span-8 text-[14.5px] text-ink/90">
-            [Evidence.]
+            Speaker at SaaStr Europa (2024), Web Summit (2023), and three vertical conferences. Contributing writer for one industry publication.
           </div>
         </div>
       </div>
@@ -200,36 +214,35 @@
     <hr class="hairline my-20" />
 
     <!-- ============================================================ -->
-    <!-- §03 PRODUCT/CRAFT — your relationship to the company's product -->
-    <!-- (Use if you're a heavy user of what they make. Delete otherwise.) -->
+    <!-- §03 CRAFT (numbers)                                           -->
     <!-- ============================================================ -->
     <section id="craft" class="mb-28">
-      <div class="label text-muted mb-6">§ 03 — [your relationship to the product]</div>
+      <div class="label text-muted mb-6">§ 03 — i use the product</div>
       <h2 class="display text-2xl sm:text-4xl mb-12">
-        [One-sentence claim about how you already use what they build.]
+        I have run my last team on Northwind for two years.
       </h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
         <div class="border hairline p-5">
-          <div class="text-3xl font-semibold mb-2">[N1]</div>
-          <div class="label text-muted">[unit / context]</div>
+          <div class="text-3xl font-semibold mb-2">47</div>
+          <div class="label text-muted">workspaces I've set up across teams</div>
         </div>
         <div class="border hairline p-5">
-          <div class="text-3xl font-semibold mb-2">[N2]</div>
-          <div class="label text-muted">[unit / context]</div>
+          <div class="text-3xl font-semibold mb-2">€2.1M</div>
+          <div class="label text-muted">spend I've routed through the platform</div>
         </div>
         <div class="border hairline p-5">
-          <div class="text-3xl font-semibold mb-2">[N3]</div>
-          <div class="label text-muted">[unit / context]</div>
+          <div class="text-3xl font-semibold mb-2">3</div>
+          <div class="label text-muted">customer references I would happily make</div>
         </div>
       </div>
 
       <div class="space-y-6 text-[15px] text-ink/90 max-w-prose">
         <p>
-          [Concrete description of how you use the product. Be specific — vague claims read as marketing.]
+          I introduced Northwind at my last two companies. The first was a six-week pilot that turned into a company standard in a quarter; the second was a full migration off a legacy vendor that I owned end-to-end. I have personally onboarded forty-seven workspaces, debugged seven SSO integrations, and filed roughly thirty product feedback tickets — most of which the product team can probably still look up.
         </p>
         <p>
-          [Why this matters for the role. The bridge from "I use it" to "this makes me better at the job".]
+          This matters for the role for one reason: the partner motion at Northwind will live or die on whether your champions can credibly defend the product internally at a buyer. I can teach a rep how to do that quickly, because I've done it myself.
         </p>
       </div>
     </section>
@@ -237,20 +250,20 @@
     <hr class="hairline my-20" />
 
     <!-- ============================================================ -->
-    <!-- §04 WHY THIS COMPANY — your conviction, in your own words      -->
+    <!-- §04 WHY                                                       -->
     <!-- ============================================================ -->
     <section id="why" class="mb-28">
-      <div class="label text-muted mb-6">§ 04 — why [company]</div>
+      <div class="label text-muted mb-6">§ 04 — why northwind</div>
       <h2 class="display text-2xl sm:text-4xl mb-12">
-        [Personal, defensible answer in one sentence.]
+        The category isn't the moat. The execution discipline is.
       </h2>
 
       <div class="space-y-6 text-[15px] text-ink/90 max-w-prose">
         <p>
-          [The conviction. Why this company specifically, not a competitor. Reference concrete things they have done that prove the values are real.]
+          There are five companies in your category. Three of them have raised more money. One of them ships faster than you. None of them, as far as I can tell from the outside, has the customer trust you have — that shows up in your churn numbers, in the tone of the engineering blog, and in the kind of customer who picks you on their second purchase rather than their first.
         </p>
         <p>
-          [What you want at this stage of your career, and how it converges with the role.]
+          What I want, at this stage of my career, is to spend the next five years building partnership distribution for a product that is clearly the right answer in its category, alongside operators who care about how the work gets done rather than how it gets announced. Northwind matches.
         </p>
       </div>
     </section>
@@ -258,7 +271,7 @@
     <hr class="hairline my-20" />
 
     <!-- ============================================================ -->
-    <!-- §05 REFERENCES                                                 -->
+    <!-- §05 REFERENCES                                                -->
     <!-- ============================================================ -->
     <section id="references" class="mb-28">
       <div class="label text-muted mb-6">§ 05 — references</div>
@@ -268,16 +281,16 @@
 
       <ul class="space-y-3 text-[15px] text-ink/90 max-w-prose border-t hairline pt-6">
         <li class="flex flex-col sm:flex-row sm:gap-6">
-          <span class="font-semibold sm:w-48 shrink-0">[Reference Name]</span>
-          <span class="text-muted">[Role, Company]</span>
+          <span class="font-semibold sm:w-48 shrink-0">Sam Okafor</span>
+          <span class="text-muted">VP Partnerships, [previous company]</span>
         </li>
         <li class="flex flex-col sm:flex-row sm:gap-6">
-          <span class="font-semibold sm:w-48 shrink-0">[Reference Name]</span>
-          <span class="text-muted">[Role, Company]</span>
+          <span class="font-semibold sm:w-48 shrink-0">Maria Hellström</span>
+          <span class="text-muted">CRO, [previous company]</span>
         </li>
         <li class="flex flex-col sm:flex-row sm:gap-6">
-          <span class="font-semibold sm:w-48 shrink-0">[Reference Name]</span>
-          <span class="text-muted">[Role, Company]</span>
+          <span class="font-semibold sm:w-48 shrink-0">Daniel Reuter</span>
+          <span class="text-muted">Founder, [reference customer]</span>
         </li>
       </ul>
       <p class="mt-6 text-xs text-muted italic">Introductions on request.</p>
@@ -286,7 +299,7 @@
   </main>
 
   <!-- ============================================================ -->
-  <!-- FOOTER — inverted block for visual rhythm + contact            -->
+  <!-- FOOTER                                                        -->
   <!-- ============================================================ -->
   <footer id="contact" class="invert">
     <div class="mx-auto max-w-3xl px-6 sm:px-8 py-20 sm:py-28">
@@ -298,27 +311,27 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12 text-[15px] mb-16">
         <div>
           <div class="label text-muted mb-2">email</div>
-          <a href="mailto:you@example.com" class="link text-white/95">you@example.com</a>
+          <a href="mailto:avery@example.com" class="link text-white/95">avery@example.com</a>
         </div>
         <div>
           <div class="label text-muted mb-2">linkedin</div>
-          <a href="https://www.linkedin.com/in/yourhandle/" class="link text-white/95">/in/yourhandle</a>
+          <a href="#" class="link text-white/95">/in/averychen</a>
         </div>
         <div>
           <div class="label text-muted mb-2">based</div>
-          <div class="text-white/95">[City] · [open to relocation?]</div>
+          <div class="text-white/95">Berlin · ready to relocate to Amsterdam</div>
         </div>
         <div>
           <div class="label text-muted mb-2">downloads</div>
           <div class="space-y-1">
-            <a href="cv.pdf" class="link text-white/95 block">↓ cv (pdf)</a>
+            <a href="#" class="link text-white/95 block">↓ cv (pdf)</a>
           </div>
         </div>
       </div>
 
       <div class="border-t hairline pt-8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-muted">
-        <span>Written for [Company]. Not indexed. Please do not share without asking.</span>
-        <span>[Month Year]</span>
+        <span>Demo page for <a href="https://github.com/RomeCar/mono-pitch" class="link text-white/95">mono-pitch</a>. All content fictional. MIT licensed.</span>
+        <span>March 2026</span>
       </div>
     </div>
   </footer>
