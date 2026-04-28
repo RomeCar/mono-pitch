@@ -1,0 +1,327 @@
+<!--
+  mono-pitch — single-page application site template
+  https://github.com/RomeCar/mono-pitch
+
+  Replace everything in [BRACKETS] with your own content.
+  Section structure can be re-ordered or trimmed; each <section> is independent.
+  No build step required: drop on any static host (Netlify, Vercel, Caddy, nginx, S3+CF).
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>[YOUR NAME] — for [COMPANY]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+          },
+          colors: {
+            ink:    '#0a0a0a',
+            paper:  '#ffffff',
+            rule:   '#e5e5e5',
+            muted:  '#737373',
+            faint:  '#a3a3a3',
+          },
+          maxWidth: { prose: '40rem' },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-feature-settings: "kern", "liga", "calt"; }
+    .label { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 500; }
+    .display { font-weight: 500; letter-spacing: -0.02em; line-height: 1.05; }
+    .hairline { border-color: #e5e5e5; }
+    .invert { background: #0a0a0a; color: #fafafa; }
+    .invert .text-muted { color: #a3a3a3 !important; }
+    .invert .hairline { border-color: #262626 !important; }
+    a.link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a.link:hover { text-decoration-thickness: 2px; }
+    ::selection { background: #0a0a0a; color: #fafafa; }
+  </style>
+</head>
+<body class="bg-paper text-ink font-mono antialiased text-[15px] leading-[1.7]">
+
+  <!-- ============================================================ -->
+  <!-- TOP NAV — anchor jumps to sections                            -->
+  <!-- ============================================================ -->
+  <nav class="border-b hairline">
+    <div class="mx-auto max-w-3xl px-6 sm:px-8 py-4 flex justify-between items-center text-xs">
+      <span class="label">[INITIALS] ▮ [COMPANY] application</span>
+      <div class="flex gap-6 text-muted">
+        <a href="#pov" class="hover:text-ink">pov</a>
+        <a href="#track-record" class="hover:text-ink">track-record</a>
+        <a href="#why" class="hover:text-ink">why</a>
+        <a href="#contact" class="hover:text-ink">contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mx-auto max-w-3xl px-6 sm:px-8 py-20 sm:py-28">
+
+    <!-- ============================================================ -->
+    <!-- HERO — name, tagline, role link, contact card                 -->
+    <!-- ============================================================ -->
+    <header class="mb-28">
+      <div class="label text-muted mb-10">// a note to [company], [month year]</div>
+      <h1 class="display text-4xl sm:text-6xl mb-10">
+        [ONE-LINE TAGLINE.]<br/>
+        [SECOND LINE OPTIONAL.]
+      </h1>
+      <p class="text-base text-ink/85 max-w-prose mb-10">
+        Written in support of my application for the
+        <a class="link" href="#">[ROLE TITLE]</a>
+        role at [COMPANY].
+      </p>
+      <div class="flex flex-wrap gap-y-3 gap-x-10 text-xs text-muted">
+        <div>
+          <div class="label text-faint mb-1">name</div>
+          <div class="text-ink whitespace-nowrap">[Your Name]</div>
+        </div>
+        <div>
+          <div class="label text-faint mb-1">based</div>
+          <div class="text-ink whitespace-nowrap">[City → City]</div>
+        </div>
+        <div>
+          <div class="label text-faint mb-1">email</div>
+          <a href="mailto:you@example.com" class="text-ink hover:underline whitespace-nowrap">you@example.com</a>
+        </div>
+        <div>
+          <div class="label text-faint mb-1">downloads</div>
+          <div class="text-ink whitespace-nowrap">
+            <a href="cv.pdf" class="hover:underline">↓ cv</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <hr class="hairline my-20" />
+
+    <!-- ============================================================ -->
+    <!-- §01 POV — your opinion on the problem the role exists to solve -->
+    <!-- ============================================================ -->
+    <section id="pov" class="mb-28">
+      <div class="label text-muted mb-6">§ 01 — [the problem this role exists to solve]</div>
+      <h2 class="display text-2xl sm:text-4xl mb-12">
+        [Sharp, contrarian-but-defensible thesis statement in one sentence.]
+      </h2>
+
+      <div class="space-y-6 text-[15px] text-ink/90 max-w-prose">
+        <p>
+          [Open with the framing — what most people think the job is, and why that framing is wrong or incomplete. This is your chance to demonstrate you understand the real problem.]
+        </p>
+        <p>
+          [Develop the argument with specifics. Names of places, regulations, technical constraints, market dynamics. The reader should finish this paragraph thinking "this person actually knows the territory."]
+        </p>
+        <p>
+          [Final paragraph re-frames the question the team should be asking. End with a bridge into your concrete recommendations or evidence below.]
+        </p>
+      </div>
+
+      <div class="mt-14 border hairline p-6 sm:p-8 bg-white">
+        <div class="label text-muted mb-4">[three concrete moves the company should make]</div>
+        <ol class="space-y-5 text-[15px] text-ink/90">
+          <li>
+            <span class="font-semibold">01 ▸ [First concrete move.]</span>
+            [One- to two-sentence explanation. Specific enough to be defensible, generic enough to not give away too much for free.]
+          </li>
+          <li>
+            <span class="font-semibold">02 ▸ [Second concrete move.]</span>
+            [Same.]
+          </li>
+          <li>
+            <span class="font-semibold">03 ▸ [Third concrete move.]</span>
+            [Same.]
+          </li>
+        </ol>
+        <p class="mt-6 text-xs text-muted">
+          [Optional one-line caveat that grounds the recommendations: who already does this, why it isn't yet standard, etc.]
+        </p>
+      </div>
+    </section>
+
+    <hr class="hairline my-20" />
+
+    <!-- ============================================================ -->
+    <!-- §02 TRACK RECORD — JD requirements mapped to specific evidence -->
+    <!-- ============================================================ -->
+    <section id="track-record" class="mb-28">
+      <div class="label text-muted mb-6">§ 02 — what you asked for, what i have done</div>
+      <h2 class="display text-2xl sm:text-4xl mb-12">
+        Job description, mapped to evidence.
+      </h2>
+
+      <div class="border-t hairline">
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
+          <div class="sm:col-span-4 label text-muted">[JD requirement #1]</div>
+          <div class="sm:col-span-8 text-[14.5px] text-ink/90">
+            [Specific evidence: company, scale, outcome. Numbers help.]
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
+          <div class="sm:col-span-4 label text-muted">[JD requirement #2]</div>
+          <div class="sm:col-span-8 text-[14.5px] text-ink/90">
+            [Evidence.]
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
+          <div class="sm:col-span-4 label text-muted">[JD requirement #3]</div>
+          <div class="sm:col-span-8 text-[14.5px] text-ink/90">
+            [Evidence.]
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
+          <div class="sm:col-span-4 label text-muted">[JD requirement #4]</div>
+          <div class="sm:col-span-8 text-[14.5px] text-ink/90">
+            [Evidence.]
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 py-6 border-b hairline">
+          <div class="sm:col-span-4 label text-muted">[JD requirement #5]</div>
+          <div class="sm:col-span-8 text-[14.5px] text-ink/90">
+            [Evidence.]
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-8 text-xs text-muted">Full detail in CV. <a href="#contact" class="link">Download below.</a></p>
+    </section>
+
+    <hr class="hairline my-20" />
+
+    <!-- ============================================================ -->
+    <!-- §03 PRODUCT/CRAFT — your relationship to the company's product -->
+    <!-- (Use if you're a heavy user of what they make. Delete otherwise.) -->
+    <!-- ============================================================ -->
+    <section id="craft" class="mb-28">
+      <div class="label text-muted mb-6">§ 03 — [your relationship to the product]</div>
+      <h2 class="display text-2xl sm:text-4xl mb-12">
+        [One-sentence claim about how you already use what they build.]
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+        <div class="border hairline p-5">
+          <div class="text-3xl font-semibold mb-2">[N1]</div>
+          <div class="label text-muted">[unit / context]</div>
+        </div>
+        <div class="border hairline p-5">
+          <div class="text-3xl font-semibold mb-2">[N2]</div>
+          <div class="label text-muted">[unit / context]</div>
+        </div>
+        <div class="border hairline p-5">
+          <div class="text-3xl font-semibold mb-2">[N3]</div>
+          <div class="label text-muted">[unit / context]</div>
+        </div>
+      </div>
+
+      <div class="space-y-6 text-[15px] text-ink/90 max-w-prose">
+        <p>
+          [Concrete description of how you use the product. Be specific — vague claims read as marketing.]
+        </p>
+        <p>
+          [Why this matters for the role. The bridge from "I use it" to "this makes me better at the job".]
+        </p>
+      </div>
+    </section>
+
+    <hr class="hairline my-20" />
+
+    <!-- ============================================================ -->
+    <!-- §04 WHY THIS COMPANY — your conviction, in your own words      -->
+    <!-- ============================================================ -->
+    <section id="why" class="mb-28">
+      <div class="label text-muted mb-6">§ 04 — why [company]</div>
+      <h2 class="display text-2xl sm:text-4xl mb-12">
+        [Personal, defensible answer in one sentence.]
+      </h2>
+
+      <div class="space-y-6 text-[15px] text-ink/90 max-w-prose">
+        <p>
+          [The conviction. Why this company specifically, not a competitor. Reference concrete things they have done that prove the values are real.]
+        </p>
+        <p>
+          [What you want at this stage of your career, and how it converges with the role.]
+        </p>
+      </div>
+    </section>
+
+    <hr class="hairline my-20" />
+
+    <!-- ============================================================ -->
+    <!-- §05 REFERENCES                                                 -->
+    <!-- ============================================================ -->
+    <section id="references" class="mb-28">
+      <div class="label text-muted mb-6">§ 05 — references</div>
+      <h2 class="display text-2xl sm:text-4xl mb-12">
+        On request.
+      </h2>
+
+      <ul class="space-y-3 text-[15px] text-ink/90 max-w-prose border-t hairline pt-6">
+        <li class="flex flex-col sm:flex-row sm:gap-6">
+          <span class="font-semibold sm:w-48 shrink-0">[Reference Name]</span>
+          <span class="text-muted">[Role, Company]</span>
+        </li>
+        <li class="flex flex-col sm:flex-row sm:gap-6">
+          <span class="font-semibold sm:w-48 shrink-0">[Reference Name]</span>
+          <span class="text-muted">[Role, Company]</span>
+        </li>
+        <li class="flex flex-col sm:flex-row sm:gap-6">
+          <span class="font-semibold sm:w-48 shrink-0">[Reference Name]</span>
+          <span class="text-muted">[Role, Company]</span>
+        </li>
+      </ul>
+      <p class="mt-6 text-xs text-muted italic">Introductions on request.</p>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER — inverted block for visual rhythm + contact            -->
+  <!-- ============================================================ -->
+  <footer id="contact" class="invert">
+    <div class="mx-auto max-w-3xl px-6 sm:px-8 py-20 sm:py-28">
+      <div class="label text-muted mb-6">§ 06 — contact</div>
+      <h2 class="display text-2xl sm:text-4xl mb-12">
+        Closest path is email.
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12 text-[15px] mb-16">
+        <div>
+          <div class="label text-muted mb-2">email</div>
+          <a href="mailto:you@example.com" class="link text-white/95">you@example.com</a>
+        </div>
+        <div>
+          <div class="label text-muted mb-2">linkedin</div>
+          <a href="https://www.linkedin.com/in/yourhandle/" class="link text-white/95">/in/yourhandle</a>
+        </div>
+        <div>
+          <div class="label text-muted mb-2">based</div>
+          <div class="text-white/95">[City] · [open to relocation?]</div>
+        </div>
+        <div>
+          <div class="label text-muted mb-2">downloads</div>
+          <div class="space-y-1">
+            <a href="cv.pdf" class="link text-white/95 block">↓ cv (pdf)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t hairline pt-8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-muted">
+        <span>Written for [Company]. Not indexed. Please do not share without asking.</span>
+        <span>[Month Year]</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
